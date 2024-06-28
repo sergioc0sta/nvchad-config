@@ -1,11 +1,10 @@
--- This file  needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
-
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
+M.base46 = {
   theme = "chadracula-evondev",
+}
+M.ui = {
   statusline = {
     overriden_modules = function(modules)
       table.insert(
@@ -19,7 +18,7 @@ M.ui = {
         end)()
       )
     end,
-    theme = "vscode_colored",
+    theme = "vscode",
     enabled = true,
     options = {
       "encoding",
@@ -29,11 +28,12 @@ M.ui = {
     },
   },
   hl_override = {
-  	Comment = { italic = true },
+    Comment = { italic = true},
   },
   hl_add = {
     NvimTreeOpenedFolderName = { fg = "green", bold = true },
   },
 }
+
 
 return M
